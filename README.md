@@ -10,6 +10,8 @@ This project is a front-end application designed to visualize social media posts
 
 The application consumes a real-time stream of social posts via Server-Sent Events (SSE) from the publicly available Upfluence API, and visualizes this data using a heatmap style grid.
 
+The application is deployed on  https://olxmpe.github.io/coding-challenge-upfluence/
+
 ### Features
 - Real-time Updates: The application updates in real-time.
 - Interactive filters: Allows users to select and deselect filters based on post types (e.g. Instagram, Tweet, etc.). When multiple filters are selected, the data is combined.
