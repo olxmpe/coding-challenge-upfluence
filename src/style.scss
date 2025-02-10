@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Unbounded:wght@200&display=swap");
+
+:root {
+  --default-font-family: "DM Sans", sans-serif;
+
+  --default-font-size: 0.9rem;
+  --font-size-kpi: 3rem;
+
+  --default-font-weight: 300;
+  --font-weight-semibold: 500;
+
+  --default-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+
+  --color-grey: #afbfc7;
+  --color-dark-grey: #3e464a;
+  --color-light-grey: #e9edef;
+  --color-blue: #038ace;
+  --color-white: white;
+  --color-black: black;
+
+  --default-border-radius: 20px;
+  --button-border-radius: 5px;
+
+  --default-gap: 1rem;
+  --small-gap: 0.5rem;
+  --big-gap: 1.5rem;
+  --section-gap: 3rem;
+
+  --button-height: 30px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-light-grey);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: var(--default-font-family);
+  font-size: var(--default-font-size);
+  font-weight: var(--default-font-weight);
+  color: var(--color-grey);
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  gap: var(--default-gap);
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.spaced {
+    justify-content: space-between;
+  }
+
+  &.small-gap {
+    gap: var(--small-gap);
+  }
+
+  &.big-gap {
+    gap: var(--big-gap);
+  }
+
+  &.section-gap {
+    gap: var(--section-gap);
+  }
+
+  &.wrapped {
+    flex-wrap: wrap;
+  }
+
+  &.no-gap {
+    gap: 0;
+  }
+}
+
+.container {
+  margin: 1rem;
+  max-width: 100%;
+  min-height: 100%;
+  box-shadow: var(--default-shadow);
+  border-radius: var(--default-border-radius);
+  background-color: var(--color-white);
+  flex-grow: 1;
+  padding: 1.5rem;
+  gap: var(--big-gap);
+  align-items: flex-start;
+
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+  }
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--color-grey);
+
+  &.primary {
+    color: var(--color-blue);
+  }
+}
+
+.button {
+  cursor: pointer;
+  gap: var(--small-gap);
+  border-radius: var(--button-border-radius);
+  border: solid 1px var(--color-grey);
+  padding: 0 0.5rem;
+  gap: var(--small-gap);
+  color: var(--color-grey);
+  height: var(--button-height);
+  text-align: center;
+  white-space: nowrap;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.1s ease-in-out;
+
+  &.active {
+    border: solid 1px var(--color-blue);
+    color: var(--color-blue);
+  }
+
+  &.primary {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border: none;
+  }
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
