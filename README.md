@@ -90,5 +90,6 @@ The real-time updates provide a dynamic user experience, keeping users informed 
 
 ## Future Improvements
 
+- Update the heatmap whenever a filter is added/removed, even when the stream is paused.
 - Optimize performance for higher posts volumes.
 - Add more detailed post information.
