@@ -82,7 +82,7 @@ watch(
               :style="{
                 backgroundColor: getBackgroundColor(day.value, hour),
                 width: `calc(100% / 7)`,
-                height: '18px',
+                height: '19px',
                 margin: '1px',
               }"
               class="heatmap-cell"
@@ -114,7 +114,7 @@ watch(
 </template>
 
 <style scoped lang="scss">
-$cell-line-height: 18px;
+$cell-line-height: 19px;
 $cell-font-size: 0.7rem;
 $weekdays-count: 7;
 
@@ -130,6 +130,7 @@ $weekdays-count: 7;
       margin-top: $cell-line-height;
 
       .legend-hour {
+        align-items: center;
         font-size: $cell-font-size;
         height: $cell-line-height;
       }

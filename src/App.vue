@@ -98,7 +98,7 @@ onMounted(() => {
     <HeatMap :data="postsCounts" :postTypes="selectedFilters" />
   </div>
 
-  <div class="container flex wrapped section-gap">
+  <div class="container flex wrapped section-gap post-types-counts">
     <div v-for="postType in postTypesList" class="flex" :key="postType.value">
       <p
         class="title"
@@ -131,9 +131,18 @@ onMounted(() => {
 }
 
 .kpi {
+  min-width: 100px;
   font-size: var(--font-size-kpi);
   font-weight: var(--font-weight-semibold);
   color: var(--color-black);
   line-height: var(--button-height);
+}
+
+.post-types-counts {
+  row-gap: var(--small-gap);
+
+  .title {
+    padding: 0;
+  }
 }
 </style>
