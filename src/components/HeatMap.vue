@@ -30,7 +30,7 @@ const getBackgroundColor = (day: number, hour: number): string => {
 };
 
 const getPostCount = (day: number, hour: number): number => {
-  return props.postTypes.reduce((total, type) => {
+  return props.postTypes.reduce((total) => {
     const count = mergedData.value[`${day}-${hour}`] || 0;
     return total + count;
   }, 0);
