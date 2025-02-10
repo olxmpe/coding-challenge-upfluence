@@ -39,7 +39,6 @@ Punchcard vs. Heatmap : After a quick POC of Chart.js, I realized that I'd never
 #### Missing Features
 
 - Post Details: Although the number of posts is shown, more detailed information on each post (for example, when multiple filters are selected, specify the account for each post type in the tooltip) could be added in the future.
-- Seamless UX: Smoother, less jerky animation of heatmap color changes
 - Tests: No tests are currently implemented. This would be the thing I would focus on most if I were to improve this application.
 
 ## Installation and Setup

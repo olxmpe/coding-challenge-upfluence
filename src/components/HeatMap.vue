@@ -161,6 +161,7 @@ $weekdays-count: 7;
           position: relative;
           border-radius: 2px;
           border: 1px solid var(--color-light-grey);
+          transition: background-color 1s ease-in-out;
         }
 
         .tooltip {
