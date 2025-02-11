@@ -47,6 +47,10 @@ html {
   box-sizing: border-box;
 }
 
+span {
+  color: inherit;
+}
+
 .flex {
   display: flex;
   gap: var(--default-gap);

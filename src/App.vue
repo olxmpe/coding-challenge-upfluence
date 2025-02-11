@@ -40,6 +40,11 @@ const toggleStreaming = () => {
   }
 };
 
+const resetStreaming = () => {
+  selectedFilters.value.length = 0;
+  resetStream();
+};
+
 const selectAllFilters = () => {
   selectedFilters.value = postTypesList.value.map(
     (type: PostType) => type.value
@@ -88,7 +93,7 @@ onMounted(() => {
           <div class="button primary" @click="toggleStreaming">
             {{ isStreaming ? "Pause stream" : "Play stream" }}
           </div>
-          <div class="button" @click="resetStream">Reset stream</div>
+          <div class="button" @click="resetStreaming">Reset stream</div>
         </div>
       </div>
     </div>
@@ -101,22 +106,13 @@ onMounted(() => {
   <div class="container flex wrapped section-gap post-types-counts">
     <div v-for="postType in postTypesList" class="flex" :key="postType.value">
       <p
-        class="title"
         :style="{
           color: selectedFilters.includes(postType.value)
             ? 'var(--color-blue)'
             : '',
         }"
       >
-        {{ postType.label }} :
-      </p>
-      <p
-        :style="{
-          color: selectedFilters.includes(postType.value)
-            ? 'var(--color-blue)'
-            : '',
-        }"
-      >
+        <span class="title"> {{ postType.label }} : </span>
         {{ postType.count }}
       </p>
     </div>
